@@ -127,7 +127,9 @@ export default class AuthController {
         let otpCheck = await Database.query().from('otp_codes').where('otp_code',otp_code).firstOrFail()
         
         if(user?.id == otpCheck.user_id){
-            user.isVerified = true
+            if(user?.isVerified){
+                user.isVerified = true
+            }
             await user?.save()
 
             return response.ok({
