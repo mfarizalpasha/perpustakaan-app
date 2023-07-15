@@ -10,7 +10,7 @@
 */
 
 import Server from '@ioc:Adonis/Core/Server'
-import Verify from 'App/Middleware/Verify'
+
 
 /*
 |--------------------------------------------------------------------------
